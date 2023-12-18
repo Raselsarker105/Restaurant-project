@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+
+<div class="row">
+  {% block content %} 
+  <div class="card-body col-md-5 p-lg-5">
+    <h1 class="card-title">Wellcome to our restaurant.</h1>
+    <h5>Our name is Rasel sarker. I'm CEO of the Restaurant.</h5>
+    <h5> Our restuarant name is Mexican Coche comedor.</h5>
+    <h5> It is 5 star hotel and wellnone in Bangladesh.</h5>
+    <h5> It is one of the most famous in Bangladesh.</h5>
+    <h5> There are manay kind of food in our restaurant.</h5>
+    <h5> Our restaurant has name and fame.</h5>
+    <h5> We serve delicious food. Like pasta, pizza, Bargar, italian pizza and manay other thing.</h5>
+    <h5>We serve low cost to high rich food</h5>
+  </div>
+  <div class="col-md-6">
+    <img
+      src="{% static 'kitchen.png' %}"
+      class="img-fluid img-thumbnail"
+      alt="..."
+    />
+  </div>
+  {% endblock %}
+</div>
+

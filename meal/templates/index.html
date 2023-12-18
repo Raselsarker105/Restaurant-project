@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block content %}
+  <h1 class="cont">Choose your favorite items.</h1>
+
+  {% comment %} Card starts from here {% endcomment %} 
+  <div class="row text-center">
+    {% for meal in categories %}
+    <div class="card col-lg-4">
+      <img src="{{ meal.strCategoryThumb }}" class="card-img-top" alt="..."/>
+      <div class="card-body">
+        <h5 class="card-id">{{ meal.idCategory }}</h5>
+          <h5 class="card-title">{{ meal.strCategory }}</h5>
+        <p class="card-text">{{ meal.strCategoryDescription|truncatewords:10 }}</p>
+      </div>
+    </div>
+    {% endfor %} 
+  </div>
+  {% comment %} Card ends here {% endcomment %} 
+{% endblock %}

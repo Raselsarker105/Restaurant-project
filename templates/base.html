@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-03</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    
+    {% comment %} navber start from here {% endcomment %}
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">MyRestaurant</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link" href="/meal/">Show Items</a>
+            <a class="nav-link" href="/about/">About</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    {% comment %} navber end from here {% endcomment %}
+
+    <div class="row">
+      {% block content %} 
+      <div class="card-body col-md-5 p-lg-5">
+        <h1 class="card-title">Wellcome to our restaurant.Don't forget to order your favorite food.</h1>
+        <h5>Beef is the culinary name for meat from cattle, particularly skeletal.</h5>
+        <h5> Humans have been eating beef since prehistoric times.</h5>
+        <h5> Chicken is a type of domesticated fowl, a subspecies and junglefowl.</h5>
+        <h5> It is one of the most common and widespread domestic animals.</h5>
+        <h5> Pasta is a staple food of traditional Italian cuisine, with</h5>
+        <h5> reference dating to 1154 in Sicily. Also commonly used to refer.</h5>
+        <h5> Pasta is typically a noodle made from an
+          unleavened dough of a durum.</h5>
+      </div>
+      <div class="col-md-6">
+        <img
+          src="static/rastaurant2.jpg" class="img-fluid rounded-start" alt="..."/>
+      </div>
+      {% endblock %}
+    </div>
+
+    {% comment %} scriptfile {% endcomment %}
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
